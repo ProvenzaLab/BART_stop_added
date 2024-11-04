@@ -12,7 +12,7 @@ export function runTask(jsPsych) {
     const popSound = new Audio('sound/pop.wav');
     const bankSound = new Audio('sound/bank.wav');
     let trialData = [];
-    let TrialNum = 5;
+    let TrialNum = 250;
     let BalloonSizeStep = 7;
     let specialTrialCount = Math.round(TrialNum * 0.25); // 25% special trials (gray + special colorful)
     let normalTrialCount = TrialNum - specialTrialCount;  // 75% normal trials
