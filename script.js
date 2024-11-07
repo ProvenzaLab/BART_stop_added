@@ -4,7 +4,7 @@ import { taskQuestionnaire } from './task_questionnaire.js';
 
 // Initialize jsPsych
 const jsPsych = initJsPsych();
-
+const beepSound = new Audio('sound/beep.wav'); //I added this.
 
 function runAllTasks() {
 
@@ -12,6 +12,7 @@ function runAllTasks() {
   taskDescription().then(() => {
     console.log("Description finished");
     console.log("Starting task...");
+    beepSound.play(); //I added this
     runTask(jsPsych).then(() => {
       console.log(" task  completed.");
       console.log("questionnaire...");
